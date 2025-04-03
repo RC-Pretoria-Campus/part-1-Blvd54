@@ -117,3 +117,17 @@ namespace cyberbot
          Console.ResetColor();
      }
  }
+        static void Main(string[] args)
+        {
+            SpeechSynthesizer synth = new SpeechSynthesizer();
+            synth.SetOutputToDefaultAudioDevice();
+            synth.Volume = 100;
+
+            logo();
+            header();
+            Welcome(synth);
+            Convo(synth);
+            
+        }
+    }
+}
